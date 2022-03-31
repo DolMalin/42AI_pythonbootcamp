@@ -1,5 +1,5 @@
 import string
-
+import	sys
 
 def	is_punctuation(c):
 	for x in string.punctuation:
@@ -24,3 +24,9 @@ def text_analyzer(text):
 	sum(map(is_punctuation, text)),
 	sum(map(str.isspace, text)))
 	)
+
+if __name__=="__main__":
+	if len(sys.argv) > 2:
+		print("AssertionError: more than one argument")
+	else:
+		text_analyzer(sys.argv[1] if len(sys.argv) == 2 else None)
