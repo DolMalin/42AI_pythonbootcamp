@@ -1,4 +1,4 @@
-kata = (19,42,21)
+kata = (19,42,22)
 
 def	check_kata(elem):
 	for x in elem:
@@ -12,6 +12,7 @@ def	join_tups(elem):
 def	print_kata(elem):
 	if not check_kata(elem):
 		print("ERROR (only integers)")
+		return
 	print("The {} numbers are: {}"
 	.format(len(kata), join_tups(elem)))
 
